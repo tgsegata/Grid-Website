@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bootstrap CSS (must come before your styles) -->
+    <!-- Bootstrap 5 + Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
 
     <!-- Your custom styles -->
     <link rel="stylesheet" href="/assets/css/style.css" />
@@ -159,7 +162,7 @@
                     <h5 class="fw-bold">Support</h5>
                     <p>Delivering faster and more personalized support with shared screens and cool design systems for
                         Figma</p>
-                    <a href="#" class="btn btn-outline-light btn-sm text-primary border-primary">Learn more</a>
+                    <a href="#" class="btn">Learn more</a>
                 </div>
             </div>
             <div class="col">
@@ -290,78 +293,185 @@
     </section>
 
     <!-- Pricing Section -->
+    <!-- Pricing Section -->
     <section class="container py-5 pricing-section text-center">
-        <h2 class="fw-bold mb-3">Affordable pricing</h2>
-        <p class="text-muted mb-4">Bill me <a href="#" class="fw-bold text-primary">monthly</a> • yearly</p>
+        <h2 class="pricing-title fw-bold mb-3">Affordable pricing</h2>
+        <p class="pricing-subtitle mb-5">
+            Bill me <span class="text-highlight">monthly</span> • yearly
+        </p>
 
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="row g-4">
             <!-- Free Plan -->
-            <div class="col">
-                <div class="pricing-card h-100 p-4">
+            <div class="col-md-4">
+                <div class="pricing-card">
                     <p class="text-primary fw-semibold mb-1">Like a pussy</p>
-                    <h2 class="fw-bold">$0</h2>
-                    <small class="text-muted">/ forever</small>
-                    <ul class="list-unstyled mt-3 mb-4 text-start">
-                        <li>✔ Components-driven system</li>
-                        <li>✔ Sales-boosting landing pages</li>
-                        <li>✔ Awesome Feather icons pack</li>
+                    <h2 class="fw-bold">Free</h2>
+                    <p class="text-uppercase text-muted mb-4">/ forever</p>
+                    <ul class="list-unstyled text-start">
+                        <li><i class="bi bi-check-circle-fill text-muted"></i>Components-driven system</li>
+                        <li><i class="bi bi-check-circle-fill text-muted"></i>Sales-boosting landing pages</li>
+                        <li><i class="bi bi-check-circle-fill text-muted"></i>Awesome Feather icons pack</li>
                     </ul>
                     <a href="#" class="btn btn-outline-secondary w-100">Try for free</a>
                 </div>
             </div>
 
-            <!-- Individual Plan -->
-            <div class="col">
-                <div class="pricing-card shadow-lg p-4 border-primary border-2 position-relative h-100">
-                    <div class="position-absolute top-0 end-0 badge bg-primary text-white mt-2 me-2">BEST!</div>
+            <!-- Individual Plan (Featured) -->
+            <div class="col-md-4">
+                <div class="pricing-card featured-card">
+                    <span class="badge">Best!</span>
                     <p class="text-primary fw-semibold mb-1">👤 Individual</p>
                     <h2 class="fw-bold">$24</h2>
-                    <small class="text-muted">/ month</small>
-                    <ul class="list-unstyled mt-3 mb-4 text-start">
-                        <li>✔ Components-driven system</li>
-                        <li>✔ Sales-boosting landing pages</li>
-                        <li>✔ Awesome Feather icons pack</li>
-                        <li>✔ Themed into 3 different styles</li>
-                        <li>✔ Will help to learn Figma</li>
+                    <p class="text-uppercase text-muted mb-4">/ month</p>
+                    <ul class="list-unstyled text-start">
+                        <li><i class="bi bi-check-circle-fill text-warning"></i>Components-driven system</li>
+                        <li><i class="bi bi-check-circle-fill text-warning"></i>Sales-boosting landing pages</li>
+                        <li><i class="bi bi-check-circle-fill text-warning"></i>Awesome Feather icons pack</li>
+                        <li><i class="bi bi-check-circle-fill text-warning"></i>Themed into 3 different styles</li>
+                        <li><i class="bi bi-check-circle-fill text-warning"></i>Will help to learn Figma</li>
                     </ul>
                     <a href="#" class="btn btn-primary w-100">Regular license</a>
                 </div>
             </div>
 
             <!-- Corporate Plan -->
-            <div class="col">
-                <div class="pricing-card h-100 p-4">
-                    <p class="text-info fw-semibold mb-1">🏢 Corporate</p>
+            <div class="col-md-4">
+                <div class="pricing-card">
+                    <p class="text-primary fw-semibold mb-1">🏢 Corporate</p>
                     <h2 class="fw-bold">$12</h2>
-                    <small class="text-muted">/ editor</small>
-                    <ul class="list-unstyled mt-3 mb-4 text-start">
-                        <li>✔ Components-driven system</li>
-                        <li>✔ Sales-boosting landing pages</li>
-                        <li>✔ Awesome Feather icons pack</li>
-                        <li>✔ Themed into 3 different styles</li>
+                    <p class="text-uppercase text-muted mb-4">/ editor</p>
+                    <ul class="list-unstyled text-start">
+                        <li><i class="bi bi-check-circle-fill text-success"></i>Components-driven system</li>
+                        <li><i class="bi bi-check-circle-fill text-success"></i>Sales-boosting landing pages</li>
+                        <li><i class="bi bi-check-circle-fill text-success"></i>Awesome Feather icons pack</li>
+                        <li><i class="bi bi-check-circle-fill text-success"></i>Themed into 3 different styles</li>
                     </ul>
-                    <a href="#" class="btn btn-outline-info w-100">Extended license</a>
+                    <a href="#" class="btn btn-outline-secondary w-100">Extended license</a>
                 </div>
             </div>
         </div>
     </section>
 
 
-    <!-- Footer -->
-    <footer class="text-center">
-        <div class="container">
-            <p class="mb-1">Follow us:
-                <a href="#">🐤</a> <a href="#">📸</a> <a href="#">📧</a>
-            </p>
-            <p>hello@fapsterapp.com</p>
-            <form class="row justify-content-center">
-                <div class="col-auto"><input type="text" class="form-control" placeholder="Your name"></div>
-                <div class="col-auto"><input type="email" class="form-control" placeholder="E-mail"></div>
-                <div class="col-auto"><button class="btn btn-primary">Send</button></div>
-            </form>
-            <p class="mt-3 small">© 2018 Your Company. All rights reserved.</p>
+    <!-- footer -->
+    <footer class="footer bg-light text-dark py-5">
+        <div class="container px-4 px-md-5">
+            <div class="row gx-5 gy-4 align-items-start">
+                <!-- Left Column: Social + Info -->
+                <div class="col-md-6">
+                    <h6 class="text-uppercase text-muted mb-2">Follow Us</h6>
+                    <div class="d-flex gap-4 mb-4">
+                        <!-- Facebook -->
+                        <a href="#">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="40" height="40" rx="20" fill="#FFEAA7" />
+                                <path
+                                    d="M25 10H22C20.6739 10 19.4021 10.5268 18.4645 11.4645C17.5268 12.4021 17 13.6739 17 15V18H14V22H17V30H21V22H24L25 18H21V15C21 14.7348 21.1054 14.4804 21.2929 14.2929C21.4804 14.1054 21.7348 14 22 14H25V10Z"
+                                    stroke="#6C5CE7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+
+                        <!-- LinkedIn -->
+                        <a href="#">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M24 16C25.5913 16 27.1174 16.6321 28.2426 17.7574C29.3679 18.8826 30 20.4087 30 22V29H26V22C26 21.4696 25.7893 20.9609 25.4142 20.5858C25.0391 20.2107 24.5304 20 24 20C23.4696 20 22.9609 20.2107 22.5858 20.5858C22.2107 20.9609 22 21.4696 22 22V29H18V22C18 20.4087 18.6321 18.8826 19.7574 17.7574C20.8826 16.6321 22.4087 16 24 16V16Z"
+                                    stroke="#6C5CE7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M14 17H10V29H14V17Z" stroke="#6C5CE7" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z"
+                                    stroke="#6C5CE7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+
+                        <!-- Slack -->
+                        <a href="#">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M30.0744 17.0021C27.8044 9.41214 24.5344 7.65214 16.9944 9.92214C9.4544 12.1921 7.6444 15.4621 9.9144 23.0021C12.1844 30.5421 15.4544 32.3521 22.9944 30.0821C30.5344 27.8121 32.3444 24.5421 30.0744 17.0021Z"
+                                    stroke="#6C5CE7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M20.5645 13.9922L24.1445 24.3922" stroke="#6C5CE7" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M15.8447 15.6121L19.4247 26.0121" stroke="#6C5CE7" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M24.3844 15.8521L13.9844 19.4321" stroke="#6C5CE7" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M26.0045 20.572L15.6045 24.152" stroke="#6C5CE7" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+
+                        <!-- Twitter -->
+                        <a href="#">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M31 11.0101C30.0424 11.6855 28.9821 12.2022 27.86 12.5401C27.2577 11.8476 26.4573 11.3567 25.567 11.134C24.6767 10.9112 23.7395 10.9673 22.8821 11.2945C22.0247 11.6218 21.2884 12.2045 20.773 12.9638C20.2575 13.7231 19.9877 14.6224 20 15.5401V16.5401C18.2426 16.5856 16.5013 16.1959 14.931 15.4055C13.3607 14.6151 12.0103 13.4487 11 12.0101C11 12.0101 7 21.0101 16 25.0101C13.9405 26.408 11.4872 27.109 9 27.0101C18 32.0101 29 27.0101 29 15.5101C28.9991 15.2315 28.9723 14.9537 28.92 14.6801C29.9406 13.6735 30.6608 12.4028 31 11.0101V11.0101Z"
+                                    stroke="#6C5CE7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                        </a>
+                    </div>
+
+                    <!-- Info -->
+                    <h6 class="text-uppercase text-muted mb-2">Information</h6>
+                    <ul class="list-unstyled row">
+                        <div class="col-sm-6">
+                            <li><a href="#" class="text-decoration-none text-dark">About Fapster app</a></li>
+                            <li><a href="#" class="text-decoration-none text-dark">Get in Touch</a></li>
+                            <li><a href="#" class="text-decoration-none text-dark">Things We Like</a></li>
+                            <li><a href="#" class="text-decoration-none text-dark">We are hiring!</a></li>
+                        </div>
+                        <div class="col-sm-6">
+                            <li><a href="#" class="text-decoration-none text-dark">Onhovered / Active</a></li>
+                            <li><a href="#" class="text-decoration-none text-dark">Privacy Policy</a></li>
+                            <li><a href="#" class="text-decoration-none text-dark">Terms of Service</a></li>
+                            <li><a href="#" class="text-decoration-none text-dark">Resources</a></li>
+                        </div>
+                    </ul>
+                </div>
+
+                <!-- Right Column: Contact -->
+                <div class="col-md-6">
+                    <h6 class="text-uppercase text-muted mb-2">Follow Us</h6>
+                    <p class="email mb-4 fw-semibold text-primary">hello@fapsterapp.com</p>
+
+                    <h6 class="text-uppercase text-muted mb-2">Keep in Touch</h6>
+                    <form class="contact-form position-relative">
+                        <div class="row g-2 mb-3">
+                            <div class="col-md-6 position-relative">
+                                <input type="text" class="form-control" placeholder="Your name" />
+                                <i class="bi bi-person icon-input"></i>
+                            </div>
+                            <div class="col-md-6 position-relative">
+                                <input type="email" class="form-control" placeholder="E-mail" />
+                                <i class="bi bi-envelope icon-input"></i>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 position-relative">
+                            <textarea class="form-control" rows="3" placeholder="Leave your message"></textarea>
+                            <i class="bi bi-pencil-square icon-textarea"></i>
+                        </div>
+
+                        <div class="d-flex justify-content-end">
+                            <button type="submit" class="btn btn-primary">SEND</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <p class="mt-4 small text-muted text-center">© 2018 Your Company. All rights reserved.</p>
         </div>
     </footer>
+
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 

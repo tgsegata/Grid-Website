@@ -1,3 +1,9 @@
+:root {
+    --bs-primary: #6C5CE7;
+    --bs-primary-rgb: 108, 92, 231;
+  }
+
+
 $font-stack: 'Inter', sans-serif;
 $primary-color: #6C5CE7;
 $highlight-color: #ff3d67;
@@ -6,6 +12,10 @@ $hero-bg-right: #fef4dd;
 $footer-bg: #fffbe6;
 $shadow-color: rgba(0, 0, 0, 0.05);
 $font-color: #2D3436;
+$purple: #6C5CE7;
+$purple-dark: #5947e2;
+$shadow-color: rgba(108, 92, 231, 0.15);
+$orange: #FFA500;
 
 body {
   font-family: $font-stack;
@@ -129,84 +139,383 @@ body {
   margin-top: 60px;
 }
 
-.features {
-  .icon {
-    font-size: 30px;
-  }
-}
-
 .features-section {
+    padding: 80px 0;
+  
+    h2 {
+      font-weight: 800;
+      font-size: 32px;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+  
+    p.text-muted {
+      font-size: 32px !important;
+      max-width: 750px;
+      margin: 0 auto 3rem auto;
+      text-align: center;
+    }
+  
     .feature-card {
-      padding: 20px;
+      padding: 24px;
       background: transparent;
-      h5 {
-        margin-top: 1rem;
-        margin-bottom: 0.5rem;
-      }
-      p {
-        font-size: 14px;
-        color: #555;
-        min-height: 80px;
-      }
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; // 👈 FIXED HERE
+      height: 100%;
+  
       .icon-circle {
-        width: 48px;
-        height: 48px;
+        width: 64px;
+        height: 64px;
         border-radius: 50%;
-        display: inline-flex;
+        display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 24px;
-        color: white;
-        margin-bottom: 10px;
+        margin-bottom: 1.25rem;
       }
+  
+      h5 {
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 0.75rem;
+        text-align: left; // 👈
+      }
+  
+      p {
+        font-size: 15px;
+        color: #555;
+        min-height: 80px;
+        margin-bottom: 1.5rem;
+        text-align: left; // 👈
+      }
+  
+      .btn {
+        font-size: 14px;
+        font-weight: 600;
+        border-radius: 12px;
+        padding: 0.4rem 1rem;
+        border: 1px solid #6C5CE7;
+        color: #6C5CE7;
+        background-color: transparent;
+        text-align: left; // 👈 Optional if full-width button
+  
+        &:hover {
+          background-color: #6C5CE7;
+          color: white;
+        }
+      }
+  
+      // Color helpers
       .bg-pink { background-color: #f78cc0; }
       .bg-blue { background-color: #3498db; }
       .bg-purple { background-color: #8254f8; }
       .bg-teal { background-color: #1abc9c; }
     }
-  }
   
-  .pricing-section {
-    .pricing-card {
-      background-color: white;
-      border-radius: 20px;
-      border: 1px solid #eee;
-      transition: all 0.3s ease;
-      h2 {
-        font-size: 36px;
-      }
-      ul {
-        padding-left: 0;
-        li {
-          margin-bottom: 10px;
-          font-size: 14px;
+    @media (max-width: 768px) {
+      .feature-card {
+        align-items: center;
+        text-align: center;
+  
+        h5, p {
+          text-align: center;
         }
       }
-      .btn {
-        margin-top: auto;
-      }
     }
+  }
   
-    .badge {
-      font-size: 10px;
-      padding: 4px 8px;
-      border-radius: 8px;
+
+
+.pricing-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  h2 {
+    font-weight: 800;
+    font-size: 64px;
+    margin-bottom: 0.5rem;
+  }
+
+  p.text-muted {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 2.5rem;
+  }
+
+  a.text-primary {
+    font-weight: 700;
+    background: linear-gradient(to right, $purple 0%, $orange 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(to right, $purple, $orange);
+      border-radius: 4px;
+    }
+    .pricing-title {
+    font-size: 64px;
+    font-weight: 800;
+    color: #2D3436;
+    margin-bottom: 1rem;
+  }
+
+  .pricing-subtitle {
+    font-size: 32px !important;
+    color: #636e72;
+    font-weight: 500;
+  
+    .text-highlight {
+      color: #6C5CE7;
+      font-weight: 600;
+      border-bottom: 3px solid #FDCB6E; // Optional underline
+      padding-bottom: 2px;
     }
   }
 
-.pricing-card {
-  border: 1px solid #eee;
-  border-radius: 16px;
-  padding: 30px;
-  text-align: center;
-  box-shadow: 0 4px 12px $shadow-color;
+  
+  }
+
+  .pricing-card {
+    background: #fff;
+    border-radius: 24px;
+    padding: 40px 32px;
+    text-align: center;
+    border: 1px solid #eee;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    h2 {
+      font-size: 48px;
+      font-weight: 800;
+      margin-bottom: 0;
+    }
+
+    p.text-muted,
+    .text-uppercase {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 1.5rem;
+    }
+
+    ul {
+      padding-left: 0;
+      margin-bottom: 1.5rem;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-size: 15px;
+        margin-bottom: 12px;
+
+        i {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .btn {
+      padding: 0.75rem 1.5rem;
+      font-weight: 600;
+      font-size: 14px;
+      border-radius: 12px;
+    }
+  }
+
+  .featured-card {
+    border: 2px solid $purple;
+    box-shadow: 0 12px 36px $shadow-color;
+    position: relative;
+
+    .badge {
+      font-size: 10px;
+      font-weight: 700;
+      padding: 0.3rem 0.6rem;
+      border-radius: 8px;
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      text-transform: uppercase;
+      background: #fff;
+      color: $purple;
+      border: 1px solid $purple;
+    }
+
+    .btn-primary {
+      background-color: $purple;
+      border: none;
+      color: #fff;
+
+      &:hover {
+        background-color: $purple-dark;
+      }
+    }
+  }
+
+  .btn-outline-secondary {
+    border: 1px solid #ccc;
+    color: #333;
+
+    &:hover {
+      border-color: $purple;
+      color: $purple;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .pricing-card {
+      padding: 2rem 1.5rem;
+    }
+  }
 }
 
-footer {
-  background-color: $footer-bg;
-  padding: 40px 0;
-  font-size: 14px;
+
+.footer {
+    background-color: #fffbe6;
+    padding-bottom: 60px;
+  
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  
+    h6 {
+      font-size: 12px;
+      color: #999;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  
+    a {
+      text-decoration: none;
+      &:hover {
+        color: #6C5CE7;
+      }
+    }
+  
+    ul {
+      padding-left: 0;
+      margin-top: 1rem;
+      li {
+        margin-bottom: 0.5rem;
+        font-size: 13px;
+      }
+    }
+  
+    .email {
+      color: #6C5CE7;
+      font-size: 32px;
+      font-weight: 600;
+      word-break: break-word;
+    }
+  
+    .contact-form {
+        input,
+        textarea {
+          color: #2d3436;
+          font-weight: 500;
+          font-size: 18px;
+        }
+      
+        // Default placeholder color for all
+        input::placeholder {
+          color: #ADADAD;
+        }
+      
+        // Specific override for textarea only
+        textarea::placeholder {
+          color: #6C5CE7;
+          font-weight: 600;
+        }
+      
+        // Icon color (if you're using Bootstrap Icons)
+        .bi {
+          color: #ADADAD;
+        }
+      
+        // Optional: purple icon just for textarea
+        .icon-textarea {
+          color: #6C5CE7 !important;
+        }
+        .form-control {
+          font-size: 14px;
+          background-color: #f2f2f2;
+          border: none;
+          border-radius: 14px;
+          padding: 0.75rem 1rem;
+          color: #2d3436;
+          transition: all 0.2s;
+      
+          &:focus {
+            border: 2px solid #6C5CE7;
+            box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.15);
+            background-color: #fff;
+            outline: none;
+          }
+        }
+        .icon-input,
+.icon-textarea {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #6C5CE7;
+  pointer-events: none;
 }
+
+.icon-textarea {
+  top: 20px; // adjust to align well with textarea
+}
+
+
+        textarea.form-control {
+          min-height: 100px;
+          padding-right: 3rem;
+          border: 2px solid #e0dffd;
+          border-radius: 16px;
+        }
+      
+        .bi-pencil-square {
+          font-size: 18px;
+          right: 20px;
+          top: 18px;
+          pointer-events: none;
+        }
+      
+        button.btn-primary {
+          background-color: #6C5CE7;
+          font-weight: bold;
+          font-size: 16px;
+          padding: 0.75rem 2.5rem;
+          border-radius: 18px;
+          box-shadow: 0 10px 30px rgba(108, 92, 231, 0.4);
+          transition: 0.2s;
+      
+          &:hover {
+            background-color: darken(#6C5CE7, 5%);
+            box-shadow: 0 12px 36px rgba(108, 92, 231, 0.5);
+          }
+        }
+      }
+      
+  }
+    
 
 @media (max-width: 576px) {
   .container-fluid {
