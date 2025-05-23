@@ -1,0 +1,117 @@
+$font-stack: 'Inter', sans-serif;
+$primary-color: #8254F8;
+$highlight-color: #ff3d67;
+$highlight-bg: #b6ffe6;
+$hero-bg-right: #fef4dd;
+$footer-bg: #fffbe6;
+$shadow-color: rgba(0, 0, 0, 0.05);
+
+body {
+  font-family: $font-stack;
+  background-color: #fff;
+  color: #333;
+}
+
+// Navigation
+.container-fluid {
+    display: flex;
+}
+.navbar-brand {
+  span {
+    font-size: 28px;
+    margin-right: 10px;
+  }
+}
+.navbar-collapse {
+    display: flex;
+    flex-direction: flex;
+}
+.sign-in-btn {
+  background-color: $primary-color;
+  color: white;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.hero {
+  background: linear-gradient(120deg, #fff 50%, $hero-bg-right 50%);
+  padding: 60px 15px 20px;
+  text-align: center;
+
+  h1 {
+    font-size: 48px;
+    font-weight: 700;
+
+    .highlight {
+      color: $highlight-color;
+      background-color: $highlight-bg;
+      border-radius: 10px;
+      padding: 0 5px;
+    }
+  }
+
+  p {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+}
+
+.grid-item {
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-weight: 600;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.btn-learn {
+  background-color: $primary-color;
+  color: white;
+  border-radius: 25px;
+  padding: 14px 30px;
+  font-weight: bold;
+  margin: 40px auto;
+  display: block;
+  text-decoration: none;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.features {
+  .icon {
+    font-size: 30px;
+  }
+}
+
+.pricing-card {
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 12px $shadow-color;
+}
+
+footer {
+  background-color: $footer-bg;
+  padding: 40px 0;
+  font-size: 14px;
+}

@@ -1,23 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- CONNECTION CSS -->
+  
+    <!-- Bootstrap CSS (must come before your styles) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+    <!-- Your custom styles -->
     <link rel="stylesheet" href="/assets/css/style.css" />
-
-    <!-- LINK RESET -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@3.0.0/reset.min.css">
-
+  
     <title>Document</title>
-</head>
+  </head>
+
 <body>
-    <header></header>
-    
 
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-white py-3 shadow-sm rounded-bottom">
+        <div class="container-fluid px-4">
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
+                <svg width="24" height="24" fill="#8254F8" class="me-2" viewBox="0 0 24 24">
+                    <path d="M3 3v18h18V3H3zm8 8H5V5h6v6zm0 8H5v-6h6v6zm8 0h-6v-6h6v6zm0-8h-6V5h6v6z" />
+                </svg>
+                Grid
+            </a>
 
-    <!-- CONNECTION JS -->
-    <script src="js/main.js" ></script>
+            <!-- Mobile toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links + Button -->
+            <div class="collapse navbar-collapse justify-content-between" id="mainNav">
+                <!-- Nav links -->
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item"><a class="nav-link fw-bold text-dark" href="#">How it works</a></li>
+                    <li class="nav-item px-2 text-warning">•</li>
+                    <li class="nav-item"><a class="nav-link text-primary" href="#">Who we are</a></li>
+                    <li class="nav-item px-2 text-warning">•</li>
+                    <li class="nav-item"><a class="nav-link text-primary" href="#">What we do</a></li>
+                    <li class="nav-item px-2 text-warning">•</li>
+                    <li class="nav-item"><a class="nav-link text-primary" href="#">Contact us</a></li>
+                </ul>
+
+                <!-- Sign In Button -->
+                <a href="#" class="btn btn-primary rounded-pill px-4 fw-semibold" style="background-color:#8254F8;">Sign
+                    In</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Combine <span class="highlight">fine</span> images</h1>
+        <p>To represent a product</p>
+    </section>
+
+    <!-- Image Grid -->
+    <div class="container py-5">
+        <div class="row g-4">
+            <!-- grid images as before (omitted for brevity) -->
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="container features py-5">
+        <h2 class="section-title">Delivering good designs since 1954 🚀🌕</h2>
+        <p class="text-center mb-5">We help bridge gaps between layouts, templates, and developers to empower everyone.
+        </p>
+        <div class="row text-center g-4">
+            <div class="col-md-3">
+                <div class="icon text-primary">💬</div>
+                <h5>Support</h5>
+                <p>Personalized support with shared screens and icon systems.</p>
+                <a href="#" class="btn btn-outline-primary btn-sm">Learn more</a>
+            </div>
+            <div class="col-md-3">
+                <div class="icon text-danger">📈</div>
+                <h5>Sales growth</h5>
+                <p>Easy-to-use UI kits with AI-based sales insights.</p>
+                <a href="#" class="btn btn-outline-danger btn-sm">Learn more</a>
+            </div>
+            <div class="col-md-3">
+                <div class="icon text-success">🔧</div>
+                <h5>Components-driven</h5>
+                <p>Efficient UI building blocks ready to go.</p>
+                <a href="#" class="btn btn-outline-success btn-sm">Learn more</a>
+            </div>
+            <div class="col-md-3">
+                <div class="icon text-info">🔄</div>
+                <h5>Swap the icon</h5>
+                <p>Replace any icon instantly with one click.</p>
+                <a href="#" class="btn btn-outline-info btn-sm">Learn more</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="container py-5">
+        <h2 class="section-title">Affordable pricing</h2>
+        <p class="text-center">Bill me <a href="#">monthly</a> · <a href="#">yearly</a></p>
+        <div class="row g-4 mt-4">
+            <div class="col-md-4">
+                <div class="pricing-card">
+                    <h5 class="text-muted">Like a pussy</h5>
+                    <h2>Free</h2>
+                    <p>/ forever</p>
+                    <ul class="list-unstyled">
+                        <li>✅ Components-driven system</li>
+                        <li>✅ Sales-boosting landing pages</li>
+                        <li>✅ Awesome Feather icons pack</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline-secondary">Try for free</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="pricing-card shadow">
+                    <h5 class="text-primary">Individual</h5>
+                    <h2>$24</h2>
+                    <p>/ month</p>
+                    <ul class="list-unstyled">
+                        <li>✅ Components system</li>
+                        <li>✅ Themed in 3 styles</li>
+                        <li>✅ Help to learn Figma</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Regular license</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="pricing-card">
+                    <h5 class="text-info">Corporate</h5>
+                    <h2>$12</h2>
+                    <p>/ editor</p>
+                    <ul class="list-unstyled">
+                        <li>✅ Components system</li>
+                        <li>✅ Themed in 3 styles</li>
+                        <li>✅ Icon packs</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline-info">Extended license</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-1">Follow us:
+                <a href="#">🐤</a> <a href="#">📸</a> <a href="#">📧</a>
+            </p>
+            <p>hello@fapsterapp.com</p>
+            <form class="row justify-content-center">
+                <div class="col-auto"><input type="text" class="form-control" placeholder="Your name"></div>
+                <div class="col-auto"><input type="email" class="form-control" placeholder="E-mail"></div>
+                <div class="col-auto"><button class="btn btn-primary">Send</button></div>
+            </form>
+            <p class="mt-3 small">© 2018 Your Company. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
+
 </html>

@@ -1,3 +1,105 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #fff;
+  color: #333;
+}
 
+.container-fluid {
+  display: flex;
+}
+
+.navbar-brand span {
+  font-size: 28px;
+  margin-right: 10px;
+}
+
+.navbar-collapse {
+  display: flex;
+  flex-direction: flex;
+}
+
+.sign-in-btn {
+  background-color: #8254F8;
+  color: white;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.hero {
+  background: linear-gradient(120deg, #fff 50%, #fef4dd 50%);
+  padding: 60px 15px 20px;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+.hero h1 .highlight {
+  color: #ff3d67;
+  background-color: #b6ffe6;
+  border-radius: 10px;
+  padding: 0 5px;
+}
+.hero p {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.grid-item {
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+.grid-item img {
+  width: 100%;
+  height: auto;
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-weight: 600;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.btn-learn {
+  background-color: #8254F8;
+  color: white;
+  border-radius: 25px;
+  padding: 14px 30px;
+  font-weight: bold;
+  margin: 40px auto;
+  display: block;
+  text-decoration: none;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.features .icon {
+  font-size: 30px;
+}
+
+.pricing-card {
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+footer {
+  background-color: #fffbe6;
+  padding: 40px 0;
+  font-size: 14px;
+}
 
 /*# sourceMappingURL=style.css.map */

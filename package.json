@@ -8,7 +8,7 @@
     "watch": "sass --watch src/scss:public/assets/css",
     "start": "concurrently \"npm run watch\" \"npm run dev\"",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },  
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -28,6 +28,7 @@
     "base64id": "^2.0.0",
     "batch": "^0.6.1",
     "binary-extensions": "^2.3.0",
+    "bootstrap": "^5.3.6",
     "brace-expansion": "^1.1.11",
     "braces": "^3.0.3",
     "browser-sync": "^2.29.3",
