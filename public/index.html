@@ -21,9 +21,11 @@
         <div class="container-fluid px-4">
             <!-- Logo -->
             <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
-                <svg width="24" height="24" fill="#8254F8" class="me-2" viewBox="0 0 24 24">
-                    <path d="M3 3v18h18V3H3zm8 8H5V5h6v6zm0 8H5v-6h6v6zm8 0h-6v-6h6v6zm0-8h-6V5h6v6z" />
-                </svg>
+                <svg width="70" height="64" viewBox="0 0 70 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M47.25 17.6H22.75C20.817 17.6 19.25 19.0327 19.25 20.8V43.2C19.25 44.9673 20.817 46.4 22.75 46.4H47.25C49.183 46.4 50.75 44.9673 50.75 43.2V20.8C50.75 19.0327 49.183 17.6 47.25 17.6Z" stroke="#6C5CE7" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M19.25 27.2H50.75" stroke="#6C5CE7" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M29.75 46.4V27.2" stroke="#6C5CE7" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                 Grid
             </a>
 
@@ -47,7 +49,7 @@
                 </ul>
 
                 <!-- Sign In Button -->
-                <a href="#" class="btn btn-primary rounded-pill px-4 fw-semibold" style="background-color:#8254F8;">Sign
+                <a href="#" class="btn btn-primary rounded-pill px-4 fw-semibold" style="background-color:#6C5CE7;">Sign
                     In</a>
             </div>
         </div>
@@ -60,11 +62,51 @@
     </section>
 
     <!-- Image Grid -->
-    <div class="container py-5">
-        <div class="row g-4">
-            <!-- grid images as before (omitted for brevity) -->
+    <section class="container py-5 grid-section">
+        <div class="row g-3">
+          <!-- Left Column -->
+          <div class="col-lg-3">
+            <p>Use mixed grid with imagery,<br>replace with your own photos and descriptions</p>
+      
+            <div class="bg-dark text-white p-3 rounded-4 mb-4">
+              <p class="fw-bold">We aimed to deliver HQ<br>templates for Figma</p>
+              <p class="text-muted small">Used by 123 people</p>
+              <img src="assets/images/globe.jpg" alt="Dome" class="img-fluid rounded-3 mt-2" />
+            </div>
+      
+            <a href="#" class="btn btn-primary rounded-pill px-4 py-2 fw-semibold">Learn more</a>
+          </div>
+      
+          <!-- Center Column -->
+          <div class="col-lg-6">
+            <div class="row g-3">
+              <div class="col-12">
+                <div class="position-relative">
+                  <img src="assets/images/guy.png" alt="Presentation" class="img-fluid rounded-4 w-100" />
+                  <h5 class="overlay-text">Consider it done!</h5>
+                </div>
+              </div>
+              <div class="col-6">
+                <img src="assets/images/book.png" alt="Book" class="img-fluid rounded-4 w-100" />
+              </div>
+              <div class="col-6">
+                <div class="position-relative">
+                  <img src="assets/images/woman.png" alt="Thinking Girl" class="img-fluid rounded-4 w-100" />
+                  <h5 class="overlay-text">See my goal?</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Right Column -->
+          <div class="col-lg-3">
+            <p>This is multipurpose grid, it fits for<br>portfolio, services or agency web site</p>
+            <img src="assets/images/shoe.png" alt="Shoe" class="img-fluid rounded-4 mb-3 w-100 bg-primary" />
+            <img src="assets/images/window.png" alt="Window" class="img-fluid rounded-4 w-100" />
+          </div>
         </div>
-    </div>
+      </section>
+      
 
     <!-- Features Section -->
     <section class="container features py-5">

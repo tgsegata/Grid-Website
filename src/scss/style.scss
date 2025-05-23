@@ -1,31 +1,48 @@
 $font-stack: 'Inter', sans-serif;
-$primary-color: #8254F8;
+$primary-color: #6C5CE7;
 $highlight-color: #ff3d67;
 $highlight-bg: #b6ffe6;
 $hero-bg-right: #fef4dd;
 $footer-bg: #fffbe6;
 $shadow-color: rgba(0, 0, 0, 0.05);
+$font-color: #2D3436;
 
 body {
   font-family: $font-stack;
   background-color: #fff;
-  color: #333;
+  color: $font-color;
 }
 
 // Navigation
 .container-fluid {
-    display: flex;
-}
-.navbar-brand {
-  span {
-    font-size: 28px;
-    margin-right: 10px;
+  display: flex;
+
+  .navbar-brand {
+    font-size: 40px;
+    color: $font-color;
   }
 }
-.navbar-collapse {
-    display: flex;
-    flex-direction: flex;
+
+.navbar-brand span {
+  font-size: 28px;
+  margin-right: 10px;
 }
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .text-primary {
+    color: $primary-color !important;
+  }
+}
+
+.navbar-collapse {
+  display: flex;
+  flex-direction: row;
+}
+
 .sign-in-btn {
   background-color: $primary-color;
   color: white;
@@ -51,32 +68,127 @@ body {
   }
 
   p {
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 32px;
+    font-weight: 700;
     margin-top: 10px;
   }
 }
 
-.grid-item {
-  border-radius: 16px;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-
-  img {
-    width: 100%;
-    height: auto;
+.grid-section {
+    .row {
+      margin-bottom: 1.5rem;
+  
+      .col-lg-6,
+      .col-lg-3 {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+  
+        // Ensure full height for images
+        .position-relative {
+          height: 100%;
+          img {
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+  
+        // Overlay text styling
+        .overlay-text {
+          position: absolute;
+          bottom: 1rem;
+          left: 1rem;
+          color: #fff;
+          font-weight: bold;
+          text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+          z-index: 1;
+        }
+  
+        // Left column adjustments
+        &.col-lg-3:first-child {
+          p {
+            font-size: 18px;
+            color: $font-color;
+            margin-bottom: 1rem;
+          }
+  
+          .bg-dark {
+            background-color: #000;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            color: #fff;
+            p {
+              margin: 0;
+              &.fw-bold {
+                font-size: 1.25rem;
+              }
+              &.text-muted {
+                font-size: 0.875rem;
+              }
+            }
+            img {
+              margin-top: 1rem;
+            }
+          }
+  
+          .btn-learn {
+            background-color: $primary-color;
+            color: white;
+            border-radius: 25px;
+            padding: 0.75rem 2rem;
+            font-weight: bold;
+            margin-top: 1rem;
+            display: inline-block;
+            text-decoration: none;
+            &:hover {
+              background-color: darken($primary-color, 10%);
+            }
+          }
+        }
+  
+        // Center column adjustments
+        &.col-lg-6 {
+          .row {
+            .col-12 {
+              .position-relative {
+                img {
+                  min-height: 300px; // Adjust based on your image
+                }
+              }
+            }
+            .col-6 {
+              &:nth-child(2) {
+                img {
+                  background-color: #ff69b4; // Pink background for "See my goal?"
+                }
+              }
+            }
+          }
+        }
+  
+        // Right column adjustments
+        &.col-lg-3:last-child {
+          p {
+            font-size: 18px;
+            color: $font-color;
+            margin-bottom: 1rem;
+          }
+          img {
+            &:nth-child(2) {
+              background-color: #1e90ff; // Blue background for shoe image
+            }
+          }
+        }
+      }
+  
+      // Ensure images have consistent rounding and fit
+      img {
+        border-radius: 16px;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
   }
-}
-
-.overlay-text {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  color: white;
-  font-weight: 600;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-}
 
 .btn-learn {
   background-color: $primary-color;
@@ -115,3 +227,35 @@ footer {
   padding: 40px 0;
   font-size: 14px;
 }
+
+@media (max-width: 576px) {
+  .container-fluid {
+    display: flex;
+
+    .navbar-brand {
+      font-size: 32px !important;
+      color: #5C5C5C;
+    }
+    svg {
+      display: none;
+    }
+  }
+
+  .navbar-toggler {
+    border: none;
+  }
+}
+// Responsive adjustments
+@media (max-width: 992px) {
+    .grid-section .row .col-lg-6,
+    .grid-section .row .col-lg-3 {
+      flex-basis: 50%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .grid-section .row .col-lg-6,
+    .grid-section .row .col-lg-3 {
+      flex-basis: 100%;
+    }
+  }
